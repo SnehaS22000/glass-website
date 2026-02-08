@@ -1,0 +1,37 @@
+<header class="glass-morphism">
+    <div class="logo-and-nav">
+        <div class="logo">
+            <span class="material-icons">favorite</span>
+            <h2>Aura Crystal</h2>
+        </div>
+
+        <nav>
+            <a href="#">Vases</a>
+            <a href="#">Sculptures</a>
+            <a href="#">Decor</a>
+            <a href="#">Commissions</a>
+        </nav>
+    </div>
+
+    <div class="actions">
+        <div class="search-wrapper" role="search">
+            <span class="material-icons">search</span>
+            <input placeholder="Explore art..." type="text" aria-label="Search" />
+        </div>
+
+        <button class="theme-btn" (click)="onThemeToggle()" aria-label="Toggle theme">
+            <span class="material-icons" *ngIf="isDarkMode()">light_mode</span>
+            <span class="material-icons" *ngIf="!isDarkMode()">dark_mode</span>
+        </button>
+
+        <button class="icon-btn" aria-label="Cart">
+            <span class="material-icons">shopping_bag</span>
+            <span class="badge" aria-hidden="true"></span>
+        </button>
+
+        <div class="avatar" role="img" aria-label="User avatar">
+            <img alt="Artist profile picture avatar"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuS1xwc4MP6L8aVPtbfSPnNbgUYHZcrQ4oe2ocUQAgNmbS1kGYxMlrfxMqijVsOAINeQQx3OTJvavLCWwuNkgG2SMHXTYn7hPljxDlZXDjAS3OqAWNNIcapueCse-InuzSCIR7eLkLYR7eFQXklGo3s0-R5XofAq6ExLufFB4AuPS8Njyj9RVoHOPopXy9DCeMplDBnzNJsBYBhEP5aa2WRccs7Ft6UOuP7SgvmwBwK8poCl_Tccg71zSj_bitu5BoofVKG-4yQ1g" />
+        </div>
+    </div>
+</header>

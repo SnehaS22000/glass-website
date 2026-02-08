@@ -1,0 +1,16 @@
+.layout-wrapper {
+    min-height: 100vh;
+    /* use padding for vertical spacing so the header can stick relative to viewport */
+    //padding: 2rem 1.25rem 0 1.25rem;
+    width: 95%;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.main-content {
+    flex: 1;
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+    /* add top padding equal to header height so content isn't overlapped by fixed header */
+    padding-top: 6rem;
+}

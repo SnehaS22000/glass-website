@@ -1,0 +1,33 @@
+// ============================================
+// CSS Custom Properties (CSS Variables)
+// ============================================
+// These variables automatically switch between light and dark theme
+// Based on the 'dark' class on the html element
+
+@import 'variables';
+
+// Default: Dark Theme
+:root {
+  --primary: #{map-get($colors-dark, 'primary')};
+  --accent-lavender: #{map-get($colors-dark, 'accent-lavender')};
+  --accent-coral: #{map-get($colors-dark, 'accent-coral')};
+  --background: #{map-get($colors-dark, 'background')};
+  --text-primary: #{map-get($colors-dark, 'text-primary')};
+  --text-secondary: #{map-get($colors-dark, 'text-secondary')};
+  --surface: #{map-get($colors-dark, 'surface')};
+  --border: #{map-get($colors-dark, 'border')};
+  --glass-bg: #{map-get($colors-dark, 'glass-bg')};
+}
+
+// Light Theme (when 'dark' class is removed from html element)
+html.light {
+  --primary: #{map-get($colors-light, 'primary')};
+  --accent-lavender: #{map-get($colors-light, 'accent-lavender')};
+  --accent-coral: #{map-get($colors-light, 'accent-coral')};
+  --background: #{map-get($colors-light, 'background')};
+  --text-primary: #{map-get($colors-light, 'text-primary')};
+  --text-secondary: #{map-get($colors-light, 'text-secondary')};
+  --surface: #{map-get($colors-light, 'surface')};
+  --border: #{map-get($colors-light, 'border')};
+  --glass-bg: #{map-get($colors-light, 'glass-bg')};
+}

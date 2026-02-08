@@ -1,0 +1,78 @@
+﻿// ============================================
+// Global Styles (SCSS-only)
+// ============================================
+@import 'styles/theme-vars';
+@import 'styles/variables';
+
+// ============================================
+// Reset and Base Styles
+// ============================================
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Body and text styles
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: $font-display;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+// Smooth theme transitions for all interactive elements
+button,
+a,
+input,
+textarea,
+select {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+// Links
+a {
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.material-icons {
+    color: var(--primary);
+}
+
+button {
+    display: flex;
+    border-radius: 9999px;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+    align-items: center;
+    border: none;
+     transition: transform 0.2s ease-in-out;
+}
+
+button.primary {
+    background-color: var(--primary);
+    color: var(--surface);
+    .material-icons {
+        color: var(--surface);
+    }
+}
+
+button.secondary {
+    background-color: var(--glass-bg);
+    color: var(--text-secondary);
+    border:var(--border);
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}

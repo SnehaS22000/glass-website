@@ -1,0 +1,29 @@
+<section class="explore-categories">
+    <div class="title-section">
+        <div class="categories-header">
+            <h2>Explore Categories</h2>
+            <p>Discover the fluidity of handcrafted glass</p>
+        </div>
+        <div class="view-all">
+            <a href="#">View All ></a>
+        </div>
+    </div>
+    <div class="category-list-container" #categoryListContainer>
+        <div class="category-card" *ngFor="let category of categories()">
+            <img alt="{{ category.name }}" [src]="category.url" />
+            <div class="category-details">
+                <p class="category-name">{{ category.name }}</p>
+                <p class="category-count">{{ category.count }}</p>
+            </div>
+        </div>
+
+        <div class="custom-category">
+            <i class="material-icons">edit_note</i>
+            <p class="category-name">Custom Art</p>
+            <p>Bring your own vision to life</p>
+            <div class="view-all">
+                <a href="#">Start Brief</a>
+            </div>
+        </div>
+    </div>
+</section>

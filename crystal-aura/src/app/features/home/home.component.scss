@@ -1,0 +1,21 @@
+.home-page {
+    background-color: var(--background);
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 1.5rem;
+
+    @media (min-width: 1024px) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+}
+
+section.categories-background {
+    background-color: var(--glass-bg);
+}

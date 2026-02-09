@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { signal } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
-import { HomeComponent } from '../features/home/home.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, HomeComponent],
+  imports: [CommonModule,RouterModule, HeaderComponent, FooterComponent],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss'
 })

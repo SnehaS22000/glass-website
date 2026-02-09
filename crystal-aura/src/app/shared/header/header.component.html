@@ -5,11 +5,11 @@
             <h2>Aura Crystal</h2>
         </div>
 
-        <nav>
+        <nav class="nav-bar">
             <a href="#">Vases</a>
             <a href="#">Sculptures</a>
             <a href="#">Decor</a>
-            <a href="#">Commissions</a>
+            <a routerLink="/custom-order" routerLinkActive="active">Custom Order</a>
         </nav>
     </div>
 
@@ -30,8 +30,34 @@
         </button>
 
         <div class="avatar" role="img" aria-label="User avatar">
-            <img alt="Artist profile picture avatar"
+            <img alt="Artist profile picture avatar" (click)="toggleOverlay($event)"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuS1xwc4MP6L8aVPtbfSPnNbgUYHZcrQ4oe2ocUQAgNmbS1kGYxMlrfxMqijVsOAINeQQx3OTJvavLCWwuNkgG2SMHXTYn7hPljxDlZXDjAS3OqAWNNIcapueCse-InuzSCIR7eLkLYR7eFQXklGo3s0-R5XofAq6ExLufFB4AuPS8Njyj9RVoHOPopXy9DCeMplDBnzNJsBYBhEP5aa2WRccs7Ft6UOuP7SgvmwBwK8poCl_Tccg71zSj_bitu5BoofVKG-4yQ1g" />
         </div>
+    </div>
+
+    <div class="profile-overlay glass-morphism reveal" (click)="$event.stopPropagation()" *ngIf="showOverlay()">
+        <ul class="profile-list">
+            <li>
+                <a href="/profile">
+                    <span class="material-icons">person</span> My Profile
+                </a>
+            </li>
+            <li>
+                <a href="/wishlist">
+                    <span class="material-icons">favorite</span> My Wishlist
+                </a>
+            </li>
+            <li>
+                <a href="/order-history">
+                    <span class="material-icons">shopping_cart</span> My Orders
+                </a>
+            </li>
+            <li>
+                <a href="/logout">
+                    <span class="material-icons">logout</span> Sign Out
+                </a>
+            </li>
+        </ul>
+
     </div>
 </header>

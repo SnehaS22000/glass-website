@@ -1,17 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface Category {
-  id: string;
-  name: string;
-  count: string;
-  url: string;
-}
+import { Category } from '../../../../core/models/categories.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-categories-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './categories-section.component.html',
   styleUrl: './categories-section.component.scss'
 })

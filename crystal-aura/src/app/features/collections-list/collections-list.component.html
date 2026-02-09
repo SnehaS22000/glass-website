@@ -1,0 +1,31 @@
+<div class="main-container reveal">
+    <h1 class="main-header-text">Explore Our<span class="header-gradient"> Artistic World</span></h1>
+    <p class="main-header-description">Discover the fluidity and brilliance of handcrafted glass across our signature
+        categories. Find your perfect piece.</p>
+    <div class="main-grid-container">
+        <div class="collection-card reveal" *ngFor="let collection of collections()">
+            <a class="collection-link">
+                <div class="collection-image-container">
+                    <img [src]="collection.imageUrl" [alt]="collection.name" class="collection-image" />
+                    <div class="collection-description">
+                        <h1 class="collection-name">{{ collection.name }}</h1>
+                        <p class="collection-description-text">{{ collection.description }}</p>
+                        <button class="shop-now-button">Explore {{collection.shortName}}</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="custom-order">
+        <div class="custom-order-description">
+            <h1>Need something bespoke?</h1>
+            <p>Our master glassblowers can bring your unique vision to life through a custom commission.</p>
+        </div>
+        <a routerLink='/custom-order'>
+            <button>
+                start custom order
+            </button>
+        </a>
+    </div>
+</div>

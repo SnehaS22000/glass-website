@@ -1,21 +1,15 @@
 <section class="featured-categories">
-    <h2>Featured Collections</h2>
+    <h2 class="header-gradient">Featured Collections</h2>
+
     <div class="category-list-container" #categoryListContainer>
         <div class="category-card" *ngFor="let category of categories()">
-            <img alt="{{ category.name }}" [src]="category.url" />
-            <div class="category-details">
-                <p class="category-name">{{ category.name }}</p>
-                <p class="category-count">{{ category.count }}</p>
-            </div>
-        </div>
-
-        <div class="custom-category">
-            <i class="material-icons">edit_note</i>
-            <p class="category-name">Custom Art</p>
-            <p>Bring your own vision to life</p>
-            <div class="view-all">
-                <a href="#">Start Brief</a>
-            </div>
+            <a routerLink='/product-detail'>
+                <img alt="{{ category.name }}" [src]="category.url" />
+                <div class="category-details">
+                    <p class="category-name">{{ category.name }}</p>
+                    <p class="category-count">{{ category.count }}</p>
+                </div>
+            </a>
         </div>
     </div>
 </section>

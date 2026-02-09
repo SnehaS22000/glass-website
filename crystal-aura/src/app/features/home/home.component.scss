@@ -6,7 +6,7 @@
 
 section {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     padding: 2rem 1.5rem;
 
     @media (min-width: 1024px) {
@@ -16,6 +16,6 @@ section {
 
 }
 
-section.categories-background {
+section.contrast-background {
     background-color: var(--glass-bg);
 }

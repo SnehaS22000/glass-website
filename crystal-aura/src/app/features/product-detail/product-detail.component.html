@@ -1,0 +1,59 @@
+<div class="main-container reveal">
+    <div class="main-grid-container">
+        <div class="product-image-container">
+            <div class="selected-image-container">
+                <img [src]="selectedImage()" />
+            </div>
+
+            <div class="image-list">
+                <div class="image-item" *ngFor="let img of imageList()">
+                    <img [src]=" img" (click)="onimageSelect(img)"
+                        [ngClass]="{ 'border-highlight': img == selectedImage() }" />
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details-container">
+            <h2>Ripple Vase - <span class="header-gradient">$320.00</span></h2>
+            <p class="color-title">SELECT COLOR</p>
+            <div class="color-list">
+                <div role="button" [ngClass]="{ 'border-highlight': color == selectedColor() }"
+                    (click)="oncolorSelect(color)" class="circle-outer" *ngFor="let color of colorList()"
+                    [ngStyle]="{background:color}">
+                    <div class="circle-inner"></div>
+                </div>
+            </div>
+            <p class="color-title">This isn't just a vase—it's a snapshot of the ocean in glass. Our Azure Ripple Vase
+                features hand-pulled
+                waves that capture the morning light, making every bouquet look like it's dancing on the water's
+                surface.</p>
+
+
+            <div class="add-to-card">
+                <button class="primary">
+                    <span class="material-icons">shopping_cart</span>
+                    <span>ADD TO CART</span>
+                </button>
+                <button class="secondary">
+                    <span class="material-icons">favorite</span>
+                </button>
+            </div>
+
+            <div class="sub-description">
+                <div class="sub-description-card">
+                    <span class="material-icons">brush</span>
+                    <p class="sub-description-header">Artist Details</p>
+                    <p class="sub-description-text">Hand-blown by Master Artisan Elena Rossi in our Seattle studio. Each
+                        piece takes 6 hours of precision heat work and slow-cooling to achieve its unique ripple effect.
+                    </p>
+                </div>
+                <div class="sub-description-card">
+                    <span class="material-icons coral">eco</span>
+                    <p class="sub-description-header">Material & Care</p>
+                    <p class="sub-description-text">Crafted from lead-free borosilicate crystal for ultimate clarity and
+                        durability. Hand wash only with lukewarm water and mild soap to keep that sparkle alive.
+                        standards of craftsmanship and beauty.</p>
+                </div>
+            </div>
+        </div>
+    </div>

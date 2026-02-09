@@ -1,8 +1,6 @@
 .featured-categories {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 h2 {
@@ -11,6 +9,7 @@ h2 {
     margin-bottom: 0.5rem;
     font-weight: 700;
     color: var(--text-primary);
+    margin-bottom: 3rem;
 }
 
 .category-list-container {
@@ -21,10 +20,10 @@ h2 {
 }
 
 .category-card {
-    max-width: 15rem;
+    max-width: 20rem;
     border-radius: 3rem;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     transition: transform 1s ease;
 
     img {
@@ -39,7 +38,7 @@ h2 {
     }
 
     @media (max-width:1418px) {
-        max-width: 20rem;
+        max-width: 30rem;
     }
 }
 
@@ -53,7 +52,7 @@ h2 {
     height: 15rem;
     border-radius: 3rem;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     transition: transform 1s ease;
     background-color: rgb(79 209 197 / 0.1);
     border: 1px solid var(--primary);
@@ -71,15 +70,20 @@ h2 {
 
 .category-details {
     position: absolute;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 1rem;
     border-radius: 0 0 3rem 3rem;
+    background-color: var(--glass-bg);
 }
 
 .category-name {
-    color: #FFFFFF;
+    color: var(--text-primary);
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-weight: 700;
@@ -88,16 +92,6 @@ h2 {
 .category-count {
     font-size: 0.875rem;
     line-height: 1.25rem;
-}
-
-.category-card:nth-child(3n+1) .category-count {
-    color: var(--accent-lavender);
-}
-
-.category-card:nth-child(3n+2) .category-count {
-    color: var(--accent-coral);
-}
-
-.category-card:nth-child(3n+3) .category-count {
+    font-weight: 800;
     color: var(--primary);
 }

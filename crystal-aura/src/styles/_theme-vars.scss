@@ -17,6 +17,7 @@
   --surface: #{map-get($colors-dark, 'surface')};
   --border: #{map-get($colors-dark, 'border')};
   --glass-bg: #{map-get($colors-dark, 'glass-bg')};
+  --image-overlay: #{$image-overlay};
 }
 
 // Light Theme (when 'dark' class is removed from html element)

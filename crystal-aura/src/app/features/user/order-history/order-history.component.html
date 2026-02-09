@@ -1,0 +1,37 @@
+<div class="order-history">
+    <h1 class="header-gradient">Order History</h1>
+    <table class="order-history-table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders ;let i = index">
+                <td>{{ order.id }}</td>
+                <td>{{ order.date | date:'shortDate'}}</td>
+                <td>
+                    <ul>
+                        <li *ngFor=" let item of order.items">{{ item.name }} x {{ item.quantity }}</li>
+                    </ul>
+                </td>
+                <td>${{ order.total }}</td>
+                <td>
+                    <span [ngClass]="{
+          'status-pending': order.status === 'Pending',
+          'status-completed': order.status === 'Completed',
+          'status-cancelled': order.status === 'Cancelled'
+        }">{{ order.status }}</span>
+                </td>
+                <td>
+                    <a class="view-details">View Details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

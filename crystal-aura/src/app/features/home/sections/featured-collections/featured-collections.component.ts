@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-featured-collections',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './featured-collections.component.html',
-  styleUrl: './featured-collections.component.scss'
+    selector: 'app-featured-collections',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './featured-collections.component.html',
+    styleUrl: './featured-collections.component.scss'
 })
 export class FeaturedCollectionsComponent {
   categories = signal<Category[]>([

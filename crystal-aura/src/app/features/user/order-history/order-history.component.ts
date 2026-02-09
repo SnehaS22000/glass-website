@@ -4,12 +4,11 @@ import { RouterModule } from '@angular/router';
 import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-order-history',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  providers: [DatePipe],
-  templateUrl: './order-history.component.html',
-  styleUrl: './order-history.component.scss'
+    selector: 'app-order-history',
+    imports: [CommonModule, RouterModule],
+    providers: [DatePipe],
+    templateUrl: './order-history.component.html',
+    styleUrl: './order-history.component.scss'
 })
 export class OrderHistoryComponent {
   orders = [

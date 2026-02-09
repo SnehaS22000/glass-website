@@ -4,11 +4,10 @@ import { Category } from '../../../../core/models/categories.model';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-categories-section',
-  standalone: true,
-  imports: [CommonModule,RouterModule],
-  templateUrl: './categories-section.component.html',
-  styleUrl: './categories-section.component.scss'
+    selector: 'app-categories-section',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './categories-section.component.html',
+    styleUrl: './categories-section.component.scss'
 })
 export class CategoriesSectionComponent {
   categories = signal<Category[]>([

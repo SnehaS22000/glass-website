@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-collections-list',
-  standalone: true,
-  imports: [CommonModule,RouterModule],
-  templateUrl: './collections-list.component.html',
-  styleUrl: './collections-list.component.scss'
+    selector: 'app-collections-list',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './collections-list.component.html',
+    styleUrl: './collections-list.component.scss'
 })
 export class CollectionsListComponent {
   collections = signal<Collection[]>([

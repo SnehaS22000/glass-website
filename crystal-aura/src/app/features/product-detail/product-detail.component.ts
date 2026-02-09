@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-product-detail',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './product-detail.component.html',
-  styleUrl: './product-detail.component.scss'
+    selector: 'app-product-detail',
+    imports: [CommonModule],
+    templateUrl: './product-detail.component.html',
+    styleUrl: './product-detail.component.scss'
 })
 export class ProductDetailComponent {
   imageList = signal<string[]>(['https://lh3.googleusercontent.com/aida-public/AB6AXuDY6wGc430PC9OffIAtvdh08D8RKMY6m4pT0Gfnm6gphxpb3gqnLc22v68AFLY4yZum7HE6nio1xOELzLnaUoZXKh2OgOFf_fmd2wSC638zJvxw7Kk6pHzRFtRiJJJFj7nwozlYycRgLhH1di99psAcCA3_XWgqBW_dE6q0TR-XdE8l9XjWG7ANgBB3ABR9gRjCKhHVNckcuUs08R3ScHF_O_14XUEvRqfunkHSoRsaliFDPBzgFyneG0tQJTYeIuBSnIk66V2YdVw',

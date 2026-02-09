@@ -6,10 +6,9 @@ import { FeaturedCollectionsComponent } from './sections/featured-collections/fe
 import { VideoSectionComponent } from './sections/video-section/video-section.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, VideoSectionComponent,HeroSectionComponent, CategoriesSectionComponent,FeaturedCollectionsComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [CommonModule, VideoSectionComponent, HeroSectionComponent, CategoriesSectionComponent, FeaturedCollectionsComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {}

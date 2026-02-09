@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { MainLayoutComponent } from './layouts/main-layout.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CommonModule, MainLayoutComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, CommonModule, MainLayoutComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
 }

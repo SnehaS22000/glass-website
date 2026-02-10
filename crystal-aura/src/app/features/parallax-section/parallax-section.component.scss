@@ -1,0 +1,74 @@
+// section {
+//     margin-top: 3rem;
+// }
+
+// .parallax {
+//     position: relative;
+//     height: 100vh;
+//     width: 100%;
+
+//     /* create scroll timeline */
+//     view-timeline-name: --parallax;
+//     view-timeline-axis: block;
+//     overflow: hidden;
+// }
+
+
+// .parallax img {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     aspect-ratio: 1/1;
+//     pointer-events: none;
+//     height: 100%;
+// }
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    
+    /* 1. Define the scroll timeline on the container */
+    view-timeline: --sectionScroll block;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    
+    /* 1. Track the section as it moves through the viewport */
+    view-timeline: --vaultTimeline block;
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 140%; /* Make image taller than container so it has room to move */
+    width: auto;
+    object-fit: cover;
+
+    /* 2. Attach the parallax animation */
+    animation: parallaxMove linear both;
+    animation-timeline: --vaultTimeline;
+    
+    /* 3. Start moving when top of section hits bottom of screen */
+    /* End moving when bottom of section hits top of screen */
+    animation-range: entry 0% exit 100%;
+}
+
+@keyframes parallaxMove {
+    from { 
+        /* Start shifted down (coming from bottom) */
+        transform: translateY(10%); 
+    }
+    to { 
+        /* End shifted up (ascending to top) */
+        transform: translateY(-20%); 
+    }
+}
+
+

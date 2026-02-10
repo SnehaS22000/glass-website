@@ -36,10 +36,6 @@ h2 {
         transform: scale(1.25);
         transition: transform 1s ease;
     }
-
-    @media (max-width:1418px) {
-        max-width: 30rem;
-    }
 }
 
 .custom-category {

@@ -19,4 +19,8 @@ export const routes: Routes = [{
 {
     path: 'order-history',
     loadComponent: () => import('./features/user/order-history/order-history.component').then(m => m.OrderHistoryComponent)
+},
+{
+    path:'vault',
+    loadComponent:()=>import('./features/parallax-section/parallax-section.component').then(m=>m.ParallaxSectionComponent)
 }];

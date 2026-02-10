@@ -1,0 +1,73 @@
+{
+  "products": {
+    "prod001": {
+      "name": "Elegant Glass Vase",
+      "description": "Handmade glass vase with unique pattern.",
+      "categoryId": "cat001",
+      "price": 49.99,
+      "availableColors": ["clear", "blue", "green"],
+      "stock": 30,
+      "limitedEdition": true,
+      "images": [
+        "https://glassart.example.com/images/vase1.jpg",
+        "https://glassart.example.com/images/vase2.jpg"
+      ],
+      "createdAt": 1676000000,
+      "updatedAt": 1676000000
+    },
+    "prod002": {
+      "name": "Glass Tea Set",
+      "description": "Elegant glass teapot with matching cups.",
+      "categoryId": "cat002",
+      "price": 79.99,
+      "availableColors": ["clear"],
+      "stock": 15,
+      "limitedEdition": false,
+      "images": [
+        "https://glassart.example.com/images/teaset1.jpg"
+      ],
+      "createdAt": 1676000500,
+      "updatedAt": 1676000500
+    }
+  },
+  "categories": {
+    "cat001": {
+      "name": "Vases",
+      "description": "Decorative and functional glass vases.",
+      "createdAt": 1675999000,
+      "updatedAt": 1675999000
+    },
+    "cat002": {
+      "name": "Tea Sets",
+      "description": "Glass teapots and cups for elegant tea time.",
+      "createdAt": 1675999500,
+      "updatedAt": 1675999500
+    }
+  },
+  "users": {
+    "uid001": {
+      "name": "Sophia Glass",
+      "email": "sophia@example.com",
+      "address": "456 Crystal Lane",
+      "phone": "9876543210",
+      "wishlist": ["prod002"],
+      "cart": [
+        { "productId": "prod001", "quantity": 1, "color": "blue" }
+      ],
+      "createdAt": 1676001000,
+      "updatedAt": 1676001000
+    }
+  },
+  "orders": {
+    "order001": {
+      "userId": "uid001",
+      "products": [
+        { "productId": "prod001", "quantity": 1, "price": 49.99, "color": "blue" }
+      ],
+      "totalPrice": 49.99,
+      "status": "pending",
+      "createdAt": 1676002000,
+      "updatedAt": 1676002000
+    }
+  }
+}

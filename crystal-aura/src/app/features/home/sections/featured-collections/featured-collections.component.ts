@@ -1,15 +1,27 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { Category } from '../../../../core/models/categories.model';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ProductService } from '../../../../core/services/firebase/product.service';
+import { Product } from '../../../../core/models/product-detail.model';
 
 @Component({
-    selector: 'app-featured-collections',
-    imports: [CommonModule, RouterModule],
-    templateUrl: './featured-collections.component.html',
-    styleUrl: './featured-collections.component.scss'
+  selector: 'app-featured-collections',
+  imports: [CommonModule, RouterModule],
+  templateUrl: './featured-collections.component.html',
+  styleUrl: './featured-collections.component.scss'
 })
-export class FeaturedCollectionsComponent {
+export class FeaturedCollectionsComponent{
+  // productService: ProductService = inject(ProductService);
+
+  // categories = signal<Product[]>([]);
+
+  // ngOnInit(): void {
+  //   this.productService.getFeaturedProducts().subscribe(res => {
+  //     this.categories.set(res);
+  //   })
+  // }
+
   categories = signal<Category[]>([
     { id: '1', name: 'Etheral Spire', count: '$1200', url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDY6wGc430PC9OffIAtvdh08D8RKMY6m4pT0Gfnm6gphxpb3gqnLc22v68AFLY4yZum7HE6nio1xOELzLnaUoZXKh2OgOFf_fmd2wSC638zJvxw7Kk6pHzRFtRiJJJFj7nwozlYycRgLhH1di99psAcCA3_XWgqBW_dE6q0TR-XdE8l9XjWG7ANgBB3ABR9gRjCKhHVNckcuUs08R3ScHF_O_14XUEvRqfunkHSoRsaliFDPBzgFyneG0tQJTYeIuBSnIk66V2YdVw' },
     { id: '2', name: 'Bloom Bowl', count: '$890', url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAhj2UY80rnwnxZPfZ1yLjmYxL-KPqOvpVYU1DLvRe0ab0rIjKtJP7QrwS-SxHaEeex3wZdjF9n9llbaz6lSIqdbfJoHb3aoqU9tLSp6ywGWHwEsts6slIFUwts3z3WxY2DdY-i4vs-gyKSl-L4CIdAXv7OFDZnyDForpb85c-IADLL8YAm-9UD111uJidd7VzUxkw-DStubf9URIVJanc32TCtDagVKORqjjUmyPktzJUjxA2p731lxtMFjnlihHagWNcB1jCclRA' },
